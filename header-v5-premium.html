@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CODE&SOUL - Header V5 Premium (Bold Typography)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { DEFAULT: '#1a365d', dark: '#0f2341', light: '#2d4a7c' },
+            gold: { DEFAULT: '#d4a84b', light: '#e5c078', dark: '#b8923f' },
+          },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+        },
+      },
+    }
+  </script>
+  <style>
+    .text-stroke {
+      -webkit-text-stroke: 2px #1a365d;
+      color: transparent;
+    }
+    .gold-gradient { background: linear-gradient(135deg, #e5c078 0%, #d4a84b 50%, #b8923f 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .marquee { animation: marquee 25s linear infinite; }
+    @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+    .card-hover { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+    .card-hover:hover { transform: translateY(-4px); box-shadow: 0 25px 50px -12px rgba(26, 54, 93, 0.15); }
+    .btn-primary {
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255,255,255,0.25) 0%, transparent 50%);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .btn-primary:hover::before { opacity: 1; }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 25px 50px -12px rgba(212, 168, 75, 0.4); }
+  </style>
+</head>
+<body class="font-sans bg-gray-50 antialiased">
+  
+  <!-- Navigation -->
+  <nav class="fixed w-full bg-gray-50/90 backdrop-blur-xl z-50">
+    <div class="max-w-7xl mx-auto px-8 py-5 flex items-center justify-between">
+      <span class="text-2xl font-black text-navy tracking-tight">CODE&SOUL</span>
+      <div class="hidden md:flex items-center gap-10">
+        <a href="#how" class="text-gray-500 hover:text-navy transition-colors text-sm font-medium">Process</a>
+        <a href="#who" class="text-gray-500 hover:text-navy transition-colors text-sm font-medium">For Who</a>
+        <a href="#pricing" class="text-gray-500 hover:text-navy transition-colors text-sm font-medium">Investment</a>
+      </div>
+      <button class="bg-navy hover:bg-navy-dark text-white font-semibold px-6 py-2.5 rounded-full transition-all hover:-translate-y-0.5">
+        Book Call
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="min-h-screen pt-32 pb-20 relative">
+    <div class="max-w-7xl mx-auto px-8">
+      
+      <!-- Oversized headline -->
+      <div class="mb-16">
+        <h1 class="text-6xl md:text-8xl lg:text-9xl font-black text-navy leading-[0.9] tracking-tight mb-4">
+          CONTENT
+        </h1>
+        <h1 class="text-6xl md:text-8xl lg:text-9xl font-black text-stroke leading-[0.9] tracking-tight mb-4">
+          WITHOUT
+        </h1>
+        <h1 class="text-6xl md:text-8xl lg:text-9xl font-black leading-[0.9] tracking-tight">
+          <span class="gold-gradient">CAMERAS</span><span class="text-navy">.</span>
+        </h1>
+      </div>
+      
+      <!-- Content grid -->
+      <div class="grid lg:grid-cols-2 gap-20 items-start">
+        
+        <!-- Left: Description and CTA -->
+        <div class="space-y-10">
+          <p class="text-xl md:text-2xl text-gray-500 leading-relaxed max-w-lg font-light">
+            We build AI avatars that post video content for you. 
+            Your expertise, your voice, your authority — 
+            <span class="text-navy font-medium">without you filming anything.</span>
+          </p>
+          
+          <div class="flex flex-col sm:flex-row gap-4">
+            <button class="btn-primary group bg-gradient-to-r from-gold to-gold-dark text-navy font-bold px-10 py-5 rounded-full shadow-xl shadow-gold/25 text-lg flex items-center justify-center gap-3">
+              <span>Start Your Free Diagnostic</span>
+              <i data-lucide="arrow-right" class="w-5 h-5 transition-transform group-hover:translate-x-1"></i>
+            </button>
+          </div>
+          
+          <div class="flex gap-12 pt-6">
+            <div>
+              <p class="text-5xl font-black text-navy">5</p>
+              <p class="text-gray-400 text-sm mt-1">weeks to launch</p>
+            </div>
+            <div>
+              <p class="text-5xl font-black text-navy">15<span class="text-2xl">+</span></p>
+              <p class="text-gray-400 text-sm mt-1">min content/mo</p>
+            </div>
+            <div>
+              <p class="text-5xl font-black text-navy">0</p>
+              <p class="text-gray-400 text-sm mt-1">hours filming</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Right: Feature cards -->
+        <div class="space-y-4">
+          <div class="card-hover bg-white p-6 rounded-2xl border border-gray-100 cursor-pointer">
+            <div class="flex items-start gap-4">
+              <div class="w-14 h-14 bg-gold/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                <i data-lucide="video" class="w-6 h-6 text-gold"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-navy text-lg mb-2">Your AI Twin</h3>
+                <p class="text-gray-500">Hyper-realistic avatar trained on your voice, style, and expertise</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card-hover bg-white p-6 rounded-2xl border border-gray-100 cursor-pointer">
+            <div class="flex items-start gap-4">
+              <div class="w-14 h-14 bg-gold/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                <i data-lucide="shield-check" class="w-6 h-6 text-gold"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-navy text-lg mb-2">Full Control</h3>
+                <p class="text-gray-500">Approve every piece of content before it goes live</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card-hover bg-white p-6 rounded-2xl border border-gray-100 cursor-pointer">
+            <div class="flex items-start gap-4">
+              <div class="w-14 h-14 bg-gold/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                <i data-lucide="zap" class="w-6 h-6 text-gold"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-navy text-lg mb-2">Done For You</h3>
+                <p class="text-gray-500">We handle scripts, videos, and publishing across all platforms</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <!-- Scrolling text banner -->
+    <div class="mt-24 py-6 bg-navy overflow-hidden">
+      <div class="marquee whitespace-nowrap flex">
+        <span class="inline-flex items-center gap-8 px-4">
+          <span class="text-white/30 text-2xl font-bold">LINKEDIN</span>
+          <span class="text-gold text-xl">✦</span>
+          <span class="text-white/30 text-2xl font-bold">YOUTUBE</span>
+          <span class="text-gold text-xl">✦</span>
+          <span class="text-white/30 text-2xl font-bold">TIKTOK</span>
+          <span class="text-gold text-xl">✦</span>
+          <span class="text-white/30 text-2xl font-bold">INSTAGRAM</span>
+          <span class="text-gold text-xl">✦</span>
+        </span>
+        <span class="inline-flex items-center gap-8 px-4">
+          <span class="text-white/30 text-2xl font-bold">LINKEDIN</span>
+          <span class="text-gold text-xl">✦</span>
+          <span class="text-white/30 text-2xl font-bold">YOUTUBE</span>
+          <span class="text-gold text-xl">✦</span>
+          <span class="text-white/30 text-2xl font-bold">TIKTOK</span>
+          <span class="text-gold text-xl">✦</span>
+          <span class="text-white/30 text-2xl font-bold">INSTAGRAM</span>
+          <span class="text-gold text-xl">✦</span>
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>

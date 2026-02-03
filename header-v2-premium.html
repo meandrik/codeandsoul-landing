@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CODE&SOUL - Header V2 Premium (Split Dark)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { DEFAULT: '#1a365d', dark: '#0a1628', light: '#2d4a7c' },
+            gold: { DEFAULT: '#d4a84b', light: '#e5c078', dark: '#b8923f' },
+          },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+        },
+      },
+    }
+  </script>
+  <style>
+    .bg-grid {
+      background-image: 
+        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+      background-size: 50px 50px;
+    }
+    .gold-glow { box-shadow: 0 0 100px rgba(212, 168, 75, 0.4), 0 0 50px rgba(212, 168, 75, 0.2); }
+    .gold-gradient { background: linear-gradient(135deg, #e5c078 0%, #d4a84b 50%, #b8923f 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .glass { background: rgba(255,255,255,0.03); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.06); }
+    @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
+    .float { animation: float 6s ease-in-out infinite; }
+    .float-delayed { animation: float 5s ease-in-out infinite 1.5s; }
+    .btn-gold {
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .btn-gold::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255,255,255,0.25) 0%, transparent 50%);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .btn-gold:hover::before { opacity: 1; }
+    .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 25px 50px -12px rgba(212, 168, 75, 0.5); }
+  </style>
+</head>
+<body class="font-sans bg-navy-dark bg-grid min-h-screen antialiased">
+  
+  <!-- Ambient lights -->
+  <div class="fixed inset-0 overflow-hidden pointer-events-none">
+    <div class="absolute top-1/4 right-0 w-[600px] h-[600px] bg-gold/10 rounded-full blur-[150px] float"></div>
+    <div class="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-navy-light/30 rounded-full blur-[100px] float-delayed"></div>
+  </div>
+  
+  <!-- Navigation -->
+  <nav class="fixed w-full glass z-50">
+    <div class="max-w-7xl mx-auto px-8 py-5 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-11 h-11 bg-gradient-to-br from-gold to-gold-dark rounded-xl flex items-center justify-center shadow-lg shadow-gold/30">
+          <i data-lucide="sparkles" class="w-5 h-5 text-navy-dark"></i>
+        </div>
+        <span class="text-xl font-semibold text-white tracking-tight">CODE&SOUL</span>
+      </div>
+      <div class="hidden md:flex items-center gap-10">
+        <a href="#how" class="text-white/50 hover:text-white transition-colors text-sm font-medium">How It Works</a>
+        <a href="#who" class="text-white/50 hover:text-white transition-colors text-sm font-medium">Who It's For</a>
+        <a href="#faq" class="text-white/50 hover:text-white transition-colors text-sm font-medium">FAQ</a>
+      </div>
+      <button class="btn-gold bg-gradient-to-r from-gold to-gold-dark text-navy-dark font-semibold px-6 py-2.5 rounded-xl shadow-lg shadow-gold/25">
+        Book a Call
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="min-h-screen pt-28 flex items-center relative">
+    <div class="max-w-7xl mx-auto px-8 grid lg:grid-cols-2 gap-20 items-center relative">
+      
+      <!-- Left: Text Content -->
+      <div class="space-y-10">
+        <div class="inline-flex items-center gap-3 glass px-5 py-2.5 rounded-full">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
+          </span>
+          <span class="text-white/70 text-sm font-medium">Now accepting new clients</span>
+        </div>
+        
+        <div class="space-y-3">
+          <h1 class="text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-[1.1] tracking-tight">
+            Build Authority
+          </h1>
+          <h1 class="text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] tracking-tight gold-gradient">
+            On Autopilot
+          </h1>
+        </div>
+        
+        <p class="text-xl text-white/50 leading-relaxed max-w-lg font-light">
+          Your AI twin posts daily — you stay focused on business. 
+          Get hyper-realistic video content without ever filming yourself.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4">
+          <button class="btn-gold group bg-gradient-to-r from-gold to-gold-dark text-navy-dark font-semibold px-8 py-4 rounded-xl shadow-xl shadow-gold/30 flex items-center justify-center gap-3">
+            <span>Book Free Diagnostic</span>
+            <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+          </button>
+          <button class="group flex items-center justify-center gap-3 text-white/70 hover:text-white font-medium px-6 py-4 rounded-xl border border-white/10 hover:border-white/20 transition-all">
+            <i data-lucide="play" class="w-5 h-5"></i>
+            <span>Watch Demo</span>
+          </button>
+        </div>
+        
+        <div class="flex items-center gap-8 pt-4 text-white/30 text-sm">
+          <div class="flex items-center gap-2">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-gold"></i>
+            <span>5-week setup</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-gold"></i>
+            <span>Done-for-you</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-gold"></i>
+            <span>15+ min/month</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Right: Visual -->
+      <div class="relative">
+        <div class="relative glass rounded-3xl p-1 gold-glow">
+          <div class="bg-navy/80 rounded-[1.4rem] p-6">
+            <!-- Video preview -->
+            <div class="aspect-[4/3] rounded-2xl overflow-hidden relative group cursor-pointer">
+              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=500&h=375&fit=crop&crop=face" 
+                   alt="Professional avatar" 
+                   class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+              <div class="absolute inset-0 bg-gradient-to-t from-navy-dark via-transparent to-transparent"></div>
+              <!-- Play button -->
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-20 h-20 rounded-full bg-gold/90 flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:bg-gold shadow-2xl shadow-gold/50">
+                  <i data-lucide="play" class="w-8 h-8 text-navy-dark ml-1"></i>
+                </div>
+              </div>
+            </div>
+            <!-- Stats bar -->
+            <div class="mt-5 flex justify-between">
+              <div class="flex items-center gap-2 text-white/50 text-sm">
+                <i data-lucide="heart" class="w-4 h-4 text-gold"></i>
+                <span>2,847 likes</span>
+              </div>
+              <div class="flex items-center gap-2 text-white/50 text-sm">
+                <i data-lucide="message-circle" class="w-4 h-4 text-gold"></i>
+                <span>156 comments</span>
+              </div>
+              <div class="flex items-center gap-2 text-white/50 text-sm">
+                <i data-lucide="share-2" class="w-4 h-4 text-gold"></i>
+                <span>89 shares</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Floating badge -->
+        <div class="absolute -top-4 -right-4 bg-gradient-to-br from-gold to-gold-dark text-navy-dark px-5 py-2.5 rounded-full font-semibold text-sm shadow-xl shadow-gold/30 float">
+          100% AI Generated
+        </div>
+        
+        <!-- Social proof -->
+        <div class="absolute -bottom-6 -left-6 glass rounded-2xl p-4 flex items-center gap-4 float-delayed">
+          <div class="flex -space-x-2">
+            <img src="https://i.pravatar.cc/40?img=11" class="w-10 h-10 rounded-full border-2 border-navy-dark" alt="">
+            <img src="https://i.pravatar.cc/40?img=12" class="w-10 h-10 rounded-full border-2 border-navy-dark" alt="">
+            <img src="https://i.pravatar.cc/40?img=13" class="w-10 h-10 rounded-full border-2 border-navy-dark" alt="">
+          </div>
+          <div>
+            <p class="text-white font-medium text-sm">15+ founders</p>
+            <p class="text-white/40 text-xs">scaled their content</p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>

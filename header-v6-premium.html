@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CODE&SOUL - Header V6 Premium (Minimal)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { DEFAULT: '#1a365d', dark: '#0f2341', light: '#2d4a7c' },
+            gold: { DEFAULT: '#d4a84b', light: '#e5c078', dark: '#b8923f' },
+          },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+        },
+      },
+    }
+  </script>
+  <style>
+    .highlight {
+      background: linear-gradient(180deg, transparent 50%, rgba(212, 168, 75, 0.25) 50%);
+    }
+    .btn-primary {
+      position: relative;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .btn-primary:hover { 
+      transform: translateY(-2px); 
+      box-shadow: 0 15px 30px -10px rgba(26, 54, 93, 0.3); 
+    }
+    .stat-item {
+      position: relative;
+    }
+    .stat-item::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(180deg, transparent, #e5e7eb, transparent);
+    }
+    .stat-item:last-child::after { display: none; }
+  </style>
+</head>
+<body class="font-sans bg-white text-navy antialiased">
+  
+  <!-- Navigation -->
+  <nav class="fixed w-full bg-white z-50">
+    <div class="max-w-5xl mx-auto px-8 py-7 flex items-center justify-between border-b border-gray-100">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 bg-navy rounded-lg flex items-center justify-center">
+          <i data-lucide="sparkles" class="w-4 h-4 text-gold"></i>
+        </div>
+        <span class="text-lg font-semibold tracking-tight">CODE&SOUL</span>
+      </div>
+      <div class="hidden md:flex items-center gap-12">
+        <a href="#how" class="text-gray-400 hover:text-navy transition-colors text-sm font-medium">How It Works</a>
+        <a href="#who" class="text-gray-400 hover:text-navy transition-colors text-sm font-medium">Who It's For</a>
+        <a href="#faq" class="text-gray-400 hover:text-navy transition-colors text-sm font-medium">FAQ</a>
+        <button class="btn-primary text-sm font-medium text-navy border border-navy px-6 py-2.5 rounded-full hover:bg-navy hover:text-white transition-all">
+          Book a Call
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="min-h-screen pt-44 pb-24 px-8">
+    <div class="max-w-4xl mx-auto">
+      
+      <!-- Tagline -->
+      <div class="flex items-center gap-3 mb-10">
+        <div class="w-8 h-px bg-gold"></div>
+        <p class="text-gold font-medium tracking-widest uppercase text-xs">AI-Powered Personal Branding</p>
+      </div>
+      
+      <!-- Main headline -->
+      <h1 class="text-5xl md:text-6xl lg:text-7xl font-semibold leading-[1.1] tracking-tight mb-10">
+        Build your authority
+        <br>
+        <span class="highlight">without filming yourself</span>
+      </h1>
+      
+      <!-- Subheadline -->
+      <p class="text-xl text-gray-400 leading-relaxed max-w-2xl mb-14 font-light">
+        We create an AI avatar that looks and sounds like you, then produce 
+        professional video content on your behalf. You approve. We publish. 
+        Your brand grows.
+      </p>
+      
+      <!-- CTA -->
+      <div class="flex flex-col sm:flex-row items-start gap-5 mb-24">
+        <button class="btn-primary group bg-navy text-white font-medium px-10 py-4 rounded-full flex items-center gap-3">
+          <span>Book Free 15-min Diagnostic</span>
+          <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+        </button>
+        <span class="text-gray-300 text-sm py-4 font-light">No commitment required</span>
+      </div>
+      
+      <!-- Simple visual divider -->
+      <div class="h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent mb-20"></div>
+      
+      <!-- Key points -->
+      <div class="grid md:grid-cols-3 gap-16">
+        <div class="stat-item pr-8">
+          <div class="flex items-baseline gap-1 mb-3">
+            <p class="text-4xl font-semibold text-navy">5</p>
+            <p class="text-lg text-gray-300 font-light">weeks</p>
+          </div>
+          <p class="text-gray-400 text-sm leading-relaxed">From onboarding to your first AI-generated video going live</p>
+        </div>
+        <div class="stat-item pr-8">
+          <div class="flex items-baseline gap-1 mb-3">
+            <p class="text-4xl font-semibold text-navy">15+</p>
+            <p class="text-lg text-gray-300 font-light">minutes</p>
+          </div>
+          <p class="text-gray-400 text-sm leading-relaxed">Of video content produced for you every month</p>
+        </div>
+        <div class="stat-item">
+          <div class="flex items-baseline gap-1 mb-3">
+            <p class="text-4xl font-semibold text-navy">100</p>
+            <p class="text-lg text-gray-300 font-light">% control</p>
+          </div>
+          <p class="text-gray-400 text-sm leading-relaxed">You approve every piece before it gets published</p>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+  
+  <!-- Simple banner -->
+  <section class="bg-gray-50 py-20">
+    <div class="max-w-4xl mx-auto px-8">
+      <p class="text-center text-gray-300 text-xs uppercase tracking-widest mb-10">Perfect for</p>
+      <div class="flex flex-wrap justify-center gap-x-16 gap-y-4 text-lg text-gray-400">
+        <span class="flex items-center gap-2">
+          <i data-lucide="building-2" class="w-4 h-4 text-gold"></i>
+          Founders
+        </span>
+        <span class="flex items-center gap-2">
+          <i data-lucide="briefcase" class="w-4 h-4 text-gold"></i>
+          Consultants
+        </span>
+        <span class="flex items-center gap-2">
+          <i data-lucide="users" class="w-4 h-4 text-gold"></i>
+          Advisors
+        </span>
+        <span class="flex items-center gap-2">
+          <i data-lucide="building" class="w-4 h-4 text-gold"></i>
+          Agency Owners
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>
