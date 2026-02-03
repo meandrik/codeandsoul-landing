@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CODE&SOUL - Header V3 (Centered)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: '#1a365d',
+            gold: '#d4a84b',
+            'gold-hover': '#c9982f',
+            'gray-50': '#f7fafc',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+    @keyframes float-delayed {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-15px); }
+    }
+    .float { animation: float 6s ease-in-out infinite; }
+    .float-delayed { animation: float-delayed 5s ease-in-out infinite 1s; }
+    .gold-underline {
+      background: linear-gradient(180deg, transparent 65%, rgba(212, 168, 75, 0.4) 65%);
+    }
+  </style>
+</head>
+<body class="font-sans bg-white">
+  
+  <!-- Navigation -->
+  <nav class="fixed w-full bg-white/90 backdrop-blur-sm z-50 border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <div class="w-10 h-10 bg-navy rounded-lg flex items-center justify-center">
+          <svg class="w-6 h-6 text-gold" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+          </svg>
+        </div>
+        <span class="text-xl font-bold text-navy">CODE&SOUL</span>
+      </div>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#how" class="text-gray-600 hover:text-navy transition">How It Works</a>
+        <a href="#who" class="text-gray-600 hover:text-navy transition">Who It's For</a>
+        <a href="#faq" class="text-gray-600 hover:text-navy transition">FAQ</a>
+      </div>
+      <button class="bg-gold hover:bg-gold-hover text-navy font-semibold px-6 py-2.5 rounded-lg transition">
+        Book a Call
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="min-h-screen pt-32 pb-20 relative overflow-hidden">
+    <!-- Background decorations -->
+    <div class="absolute top-40 left-10 w-20 h-20 bg-gold/10 rounded-full float"></div>
+    <div class="absolute top-60 right-20 w-32 h-32 bg-navy/5 rounded-full float-delayed"></div>
+    <div class="absolute bottom-40 left-1/4 w-24 h-24 bg-gold/5 rounded-full float"></div>
+    
+    <div class="max-w-5xl mx-auto px-6 text-center relative">
+      <!-- Badge -->
+      <div class="inline-flex items-center gap-2 bg-navy/5 text-navy px-5 py-2.5 rounded-full text-sm font-medium mb-8">
+        <svg class="w-4 h-4 text-gold" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+        </svg>
+        Done-for-You AI Content Systems
+      </div>
+      
+      <!-- Main headline -->
+      <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-navy leading-tight mb-8">
+        What If You
+        <span class="gold-underline">Never Had to Film</span>
+        <br>
+        Yourself Again?
+      </h1>
+      
+      <!-- Subheadline -->
+      <p class="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto mb-12 leading-relaxed">
+        Meet your AI-powered content double. Build authority, generate leads, 
+        and stay visible — without sacrificing your evenings.
+      </p>
+      
+      <!-- CTAs -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+        <button class="bg-gold hover:bg-gold-hover text-navy font-semibold px-10 py-4 rounded-xl transition transform hover:-translate-y-1 shadow-xl shadow-gold/20 text-lg">
+          Book Your Free Diagnostic →
+        </button>
+        <button class="border-2 border-navy/20 text-navy font-semibold px-10 py-4 rounded-xl hover:border-navy/40 transition text-lg">
+          See How It Works
+        </button>
+      </div>
+      
+      <!-- Trust indicators -->
+      <div class="flex flex-wrap justify-center gap-8 mb-16 text-gray-500">
+        <div class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-gold" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+          </svg>
+          <span>5-week implementation</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-gold" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+          </svg>
+          <span>15+ min video/month</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-gold" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+          </svg>
+          <span>Full approval control</span>
+        </div>
+      </div>
+      
+      <!-- Demo video preview -->
+      <div class="relative max-w-4xl mx-auto">
+        <div class="absolute -inset-4 bg-gradient-to-r from-navy/5 via-gold/10 to-navy/5 rounded-3xl blur-2xl"></div>
+        <div class="relative bg-gray-50 rounded-2xl p-4 shadow-2xl">
+          <div class="aspect-video bg-gradient-to-br from-navy to-navy/80 rounded-xl flex items-center justify-center relative overflow-hidden">
+            <!-- Placeholder for demo video -->
+            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1200&h=675&fit=crop" 
+                 alt="Dashboard preview" 
+                 class="absolute inset-0 w-full h-full object-cover opacity-30">
+            <!-- Play button -->
+            <div class="relative w-24 h-24 bg-gold rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition shadow-2xl shadow-gold/50">
+              <svg class="w-12 h-12 text-navy ml-2" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            </div>
+            <p class="absolute bottom-6 left-6 text-white font-medium">Watch: How It Works (2 min)</p>
+          </div>
+        </div>
+        
+        <!-- Floating elements around video -->
+        <div class="absolute -top-6 -left-6 bg-white rounded-xl shadow-lg p-4 float">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+              <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+              </svg>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-navy">Video approved!</p>
+              <p class="text-xs text-gray-500">Just now</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="absolute -bottom-4 -right-4 bg-white rounded-xl shadow-lg p-4 float-delayed">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-gold/20 rounded-full flex items-center justify-center">
+              <svg class="w-5 h-5 text-gold" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/>
+              </svg>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-navy">+340% engagement</p>
+              <p class="text-xs text-gray-500">This month</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CODE&SOUL - Header V6 (Minimal)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: '#1a365d',
+            gold: '#d4a84b',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    .highlight {
+      background: linear-gradient(180deg, transparent 50%, rgba(212, 168, 75, 0.3) 50%);
+    }
+  </style>
+</head>
+<body class="font-sans bg-white text-navy">
+  
+  <!-- Navigation -->
+  <nav class="fixed w-full bg-white z-50">
+    <div class="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between border-b border-gray-100">
+      <span class="text-xl font-semibold tracking-tight">CODE&SOUL</span>
+      <div class="hidden md:flex items-center gap-10">
+        <a href="#how" class="text-gray-500 hover:text-navy transition text-sm">How It Works</a>
+        <a href="#who" class="text-gray-500 hover:text-navy transition text-sm">Who It's For</a>
+        <a href="#faq" class="text-gray-500 hover:text-navy transition text-sm">FAQ</a>
+        <button class="text-sm font-medium text-navy border border-navy px-5 py-2 rounded-full hover:bg-navy hover:text-white transition">
+          Book a Call
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="min-h-screen pt-40 pb-24 px-6">
+    <div class="max-w-4xl mx-auto">
+      
+      <!-- Tagline -->
+      <p class="text-gold font-medium tracking-wide uppercase text-sm mb-8">
+        AI-Powered Personal Branding
+      </p>
+      
+      <!-- Main headline -->
+      <h1 class="text-5xl md:text-6xl lg:text-7xl font-semibold leading-tight mb-8">
+        Build your authority
+        <br>
+        <span class="highlight">without filming yourself</span>
+      </h1>
+      
+      <!-- Subheadline -->
+      <p class="text-xl text-gray-500 leading-relaxed max-w-2xl mb-12">
+        We create an AI avatar that looks and sounds like you, then produce 
+        professional video content on your behalf. You approve. We publish. 
+        Your brand grows.
+      </p>
+      
+      <!-- CTA -->
+      <div class="flex flex-col sm:flex-row items-start gap-4 mb-20">
+        <button class="bg-navy text-white font-medium px-8 py-4 rounded-full hover:bg-navy/90 transition">
+          Book Free 15-min Diagnostic →
+        </button>
+        <span class="text-gray-400 text-sm py-4">No commitment required</span>
+      </div>
+      
+      <!-- Simple visual divider -->
+      <div class="h-px bg-gray-100 mb-20"></div>
+      
+      <!-- Key points -->
+      <div class="grid md:grid-cols-3 gap-12">
+        <div>
+          <p class="text-3xl font-semibold text-navy mb-2">5 weeks</p>
+          <p class="text-gray-500">From onboarding to your first AI-generated video going live</p>
+        </div>
+        <div>
+          <p class="text-3xl font-semibold text-navy mb-2">15+ minutes</p>
+          <p class="text-gray-500">Of video content produced for you every month</p>
+        </div>
+        <div>
+          <p class="text-3xl font-semibold text-navy mb-2">100% control</p>
+          <p class="text-gray-500">You approve every piece before it gets published</p>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+  
+  <!-- Simple banner -->
+  <section class="bg-gray-50 py-16">
+    <div class="max-w-4xl mx-auto px-6">
+      <p class="text-center text-gray-400 text-sm uppercase tracking-wide mb-8">Perfect for</p>
+      <div class="flex flex-wrap justify-center gap-x-12 gap-y-4 text-lg text-gray-600">
+        <span>Founders</span>
+        <span class="text-gray-300">•</span>
+        <span>Consultants</span>
+        <span class="text-gray-300">•</span>
+        <span>Advisors</span>
+        <span class="text-gray-300">•</span>
+        <span>Agency Owners</span>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
