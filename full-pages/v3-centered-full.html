@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CODE&SOUL — Build Authority Without Being On Camera</title>
+  <meta name="description" content="AI-powered video content that looks and sounds like you. Build authority at scale while staying focused on what matters.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { DEFAULT: '#1a365d', dark: '#0d1b2a', light: '#2d4a7c' },
+            gold: { DEFAULT: '#d4a84b', light: '#e5c078', dark: '#b8923f' },
+          },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+        },
+      },
+    }
+  </script>
+  <style>
+    .btn-primary {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 20px 40px -10px rgba(26, 54, 93, 0.3);
+    }
+    .card-float {
+      transition: all 0.3s;
+    }
+    .card-float:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 30px 60px -15px rgba(26, 54, 93, 0.15);
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+    .float { animation: float 6s ease-in-out infinite; }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
+    .faq-item.open .faq-answer { max-height: 200px; }
+    .faq-item.open .faq-icon { transform: rotate(180deg); }
+    .faq-icon { transition: transform 0.3s; }
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="font-sans antialiased bg-white text-navy">
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="min-h-screen relative bg-gradient-to-b from-white via-gray-50 to-white">
+    
+    <!-- Navigation -->
+    <nav class="relative z-50">
+      <div class="max-w-6xl mx-auto px-6 lg:px-8 py-6 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-navy rounded-xl flex items-center justify-center">
+            <i data-lucide="sparkles" class="w-4 h-4 text-gold"></i>
+          </div>
+          <span class="text-lg font-semibold text-navy tracking-tight">CODE&SOUL</span>
+        </div>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="#problem" class="text-gray-400 hover:text-navy transition-colors text-sm">The Problem</a>
+          <a href="#solution" class="text-gray-400 hover:text-navy transition-colors text-sm">Solution</a>
+          <a href="#pricing" class="text-gray-400 hover:text-navy transition-colors text-sm">Pricing</a>
+          <a href="#faq" class="text-gray-400 hover:text-navy transition-colors text-sm">FAQ</a>
+        </div>
+        <a href="#cta" class="btn-primary bg-navy text-white font-medium px-5 py-2 rounded-lg text-sm">
+          Get Started
+        </a>
+      </div>
+    </nav>
+
+    <!-- Hero Content -->
+    <div class="relative max-w-4xl mx-auto px-6 lg:px-8 pt-20 lg:pt-28 pb-20 text-center">
+      
+      <!-- Badge -->
+      <div class="inline-flex items-center gap-2 bg-gold/10 border border-gold/20 px-4 py-2 rounded-full mb-8">
+        <span class="relative flex h-2 w-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+        </span>
+        <span class="text-navy/70 text-sm">2 spots remaining this month</span>
+      </div>
+      
+      <!-- Headline -->
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-navy leading-[1.15] tracking-tight mb-6">
+        Build Your Authority<br>
+        <span class="text-gold">Without Being On Camera</span>
+      </h1>
+      
+      <!-- Subheadline -->
+      <p class="text-lg lg:text-xl text-gray-500 leading-relaxed max-w-2xl mx-auto mb-10">
+        AI-powered video content that looks and sounds like you. Build authority at scale while staying focused on what matters.
+      </p>
+      
+      <!-- CTA -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+        <a href="#cta" class="btn-primary group bg-navy text-white font-semibold px-8 py-4 rounded-xl flex items-center gap-3 shadow-xl shadow-navy/20">
+          <span>Book Free Strategy Call</span>
+          <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+        </a>
+        <button class="group flex items-center gap-3 text-gray-400 hover:text-navy transition-colors px-4 py-4">
+          <div class="w-10 h-10 rounded-full border-2 border-gray-200 flex items-center justify-center group-hover:border-navy transition-colors">
+            <i data-lucide="play" class="w-4 h-4 ml-0.5"></i>
+          </div>
+          <span class="text-sm font-medium">Watch Demo</span>
+        </button>
+      </div>
+      
+      <!-- Video Preview -->
+      <div class="relative max-w-3xl mx-auto">
+        <div class="aspect-video bg-gradient-to-br from-navy to-navy-light rounded-2xl shadow-2xl shadow-navy/20 overflow-hidden relative group cursor-pointer">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=450&fit=crop&crop=face" alt="Avatar demo" class="w-full h-full object-cover opacity-90">
+          <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/30 to-transparent"></div>
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="w-20 h-20 rounded-full bg-white flex items-center justify-center shadow-2xl transition-transform group-hover:scale-110">
+              <i data-lucide="play" class="w-8 h-8 text-navy ml-1"></i>
+            </div>
+          </div>
+          <div class="absolute bottom-6 left-6 text-white">
+            <p class="font-semibold text-lg">See the AI in action</p>
+            <p class="text-white/60 text-sm">2:34 demo video</p>
+          </div>
+        </div>
+        
+        <!-- Floating cards -->
+        <div class="absolute -bottom-6 -left-6 bg-white rounded-2xl p-4 shadow-xl border border-gray-100 float hidden lg:flex items-center gap-3">
+          <div class="w-10 h-10 bg-emerald-50 rounded-xl flex items-center justify-center">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-500"></i>
+          </div>
+          <div>
+            <p class="text-navy font-medium text-sm">New lead from LinkedIn</p>
+            <p class="text-gray-400 text-xs">Just now</p>
+          </div>
+        </div>
+        
+        <div class="absolute -top-4 -right-4 bg-white rounded-2xl px-5 py-3 shadow-xl border border-gray-100 float hidden lg:block" style="animation-delay: 1s;">
+          <div class="flex items-center gap-2">
+            <i data-lucide="trending-up" class="w-5 h-5 text-gold"></i>
+            <div>
+              <p class="text-navy font-semibold text-sm">+340%</p>
+              <p class="text-gray-400 text-xs">Engagement</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Stats -->
+      <div class="grid grid-cols-3 gap-8 max-w-2xl mx-auto mt-20 pt-10 border-t border-gray-100">
+        <div class="text-center">
+          <p class="text-4xl font-bold text-navy">5</p>
+          <p class="text-gray-400 text-sm mt-1">Weeks to launch</p>
+        </div>
+        <div class="text-center">
+          <p class="text-4xl font-bold text-navy">15+</p>
+          <p class="text-gray-400 text-sm mt-1">Minutes monthly</p>
+        </div>
+        <div class="text-center">
+          <p class="text-4xl font-bold text-navy">100%</p>
+          <p class="text-gray-400 text-sm mt-1">Your control</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PROBLEM SECTION ==================== -->
+  <section id="problem" class="py-24 lg:py-32 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-6 lg:px-8">
+      
+      <div class="text-center mb-16">
+        <p class="text-gold font-medium text-sm tracking-wider uppercase mb-4">Sound Familiar?</p>
+        <h2 class="text-3xl lg:text-4xl font-bold text-navy mb-6">The Founder Content Trap</h2>
+        <p class="text-gray-500 text-lg max-w-2xl mx-auto">
+          You know personal branding drives business. But the execution? That's where it falls apart.
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="card-float bg-white rounded-2xl p-8 border border-gray-100">
+          <div class="w-12 h-12 rounded-xl bg-red-50 flex items-center justify-center mb-5">
+            <i data-lucide="video-off" class="w-6 h-6 text-red-500"></i>
+          </div>
+          <h3 class="text-lg font-semibold text-navy mb-2">"I hate being on camera"</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">You know video performs best. But filming yourself? Exhausting. Awkward. Not happening.</p>
+        </div>
+        
+        <div class="card-float bg-white rounded-2xl p-8 border border-gray-100">
+          <div class="w-12 h-12 rounded-xl bg-orange-50 flex items-center justify-center mb-5">
+            <i data-lucide="clock" class="w-6 h-6 text-orange-500"></i>
+          </div>
+          <h3 class="text-lg font-semibold text-navy mb-2">"I don't have time"</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Between client work and running the business — content falls to the bottom of the list.</p>
+        </div>
+        
+        <div class="card-float bg-white rounded-2xl p-8 border border-gray-100">
+          <div class="w-12 h-12 rounded-xl bg-yellow-50 flex items-center justify-center mb-5">
+            <i data-lucide="wallet" class="w-6 h-6 text-yellow-600"></i>
+          </div>
+          <h3 class="text-lg font-semibold text-navy mb-2">"Video teams cost too much"</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">€5k+/month for a video team. And they still need YOU in the footage.</p>
+        </div>
+        
+        <div class="card-float bg-white rounded-2xl p-8 border border-gray-100">
+          <div class="w-12 h-12 rounded-xl bg-purple-50 flex items-center justify-center mb-5">
+            <i data-lucide="brain" class="w-6 h-6 text-purple-500"></i>
+          </div>
+          <h3 class="text-lg font-semibold text-navy mb-2">"Expertise stuck in my head"</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">You have decades of knowledge. Turning it into content? Different skill entirely.</p>
+        </div>
+        
+        <div class="card-float bg-white rounded-2xl p-8 border border-gray-100">
+          <div class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center mb-5">
+            <i data-lucide="ghost" class="w-6 h-6 text-blue-500"></i>
+          </div>
+          <h3 class="text-lg font-semibold text-navy mb-2">"Ghostwriters miss my voice"</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">You tried outsourcing. The content felt off. Hours spent revising.</p>
+        </div>
+        
+        <div class="card-float bg-white rounded-2xl p-8 border border-gray-100">
+          <div class="w-12 h-12 rounded-xl bg-pink-50 flex items-center justify-center mb-5">
+            <i data-lucide="eye-off" class="w-6 h-6 text-pink-500"></i>
+          </div>
+          <h3 class="text-lg font-semibold text-navy mb-2">"I'm invisible online"</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Competitors are building audiences. You're invisible — despite having more expertise.</p>
+        </div>
+      </div>
+      
+      <div class="mt-16 text-center">
+        <p class="text-xl text-gray-600">
+          You have the expertise. You just don't have the time.<br>
+          <span class="text-gold font-medium">What if you didn't have to?</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SOLUTION SECTION ==================== -->
+  <section id="solution" class="py-24 lg:py-32 bg-white">
+    <div class="max-w-6xl mx-auto px-6 lg:px-8">
+      
+      <div class="text-center mb-16">
+        <p class="text-gold font-medium text-sm tracking-wider uppercase mb-4">The Solution</p>
+        <h2 class="text-3xl lg:text-4xl font-bold text-navy mb-6">Your AI Content System</h2>
+        <p class="text-gray-500 text-lg max-w-2xl mx-auto">
+          A hyper-realistic AI avatar that looks, sounds, and communicates like you — without you ever filming.
+        </p>
+      </div>
+      
+      <!-- How it works -->
+      <div class="grid md:grid-cols-4 gap-6 mb-20">
+        <div class="text-center">
+          <div class="w-14 h-14 rounded-2xl bg-gold/10 flex items-center justify-center mx-auto mb-4">
+            <span class="text-gold font-bold text-xl">1</span>
+          </div>
+          <h3 class="font-semibold text-navy mb-2">Capture</h3>
+          <p class="text-gray-500 text-sm">2-hour onboarding to capture your voice and style</p>
+        </div>
+        <div class="text-center">
+          <div class="w-14 h-14 rounded-2xl bg-gold/10 flex items-center justify-center mx-auto mb-4">
+            <span class="text-gold font-bold text-xl">2</span>
+          </div>
+          <h3 class="font-semibold text-navy mb-2">Build</h3>
+          <p class="text-gray-500 text-sm">We train your AI avatar to look and sound like you</p>
+        </div>
+        <div class="text-center">
+          <div class="w-14 h-14 rounded-2xl bg-gold/10 flex items-center justify-center mx-auto mb-4">
+            <span class="text-gold font-bold text-xl">3</span>
+          </div>
+          <h3 class="font-semibold text-navy mb-2">Generate</h3>
+          <p class="text-gray-500 text-sm">AI creates scripts, your avatar delivers them</p>
+        </div>
+        <div class="text-center">
+          <div class="w-14 h-14 rounded-2xl bg-gold/10 flex items-center justify-center mx-auto mb-4">
+            <span class="text-gold font-bold text-xl">4</span>
+          </div>
+          <h3 class="font-semibold text-navy mb-2">Publish</h3>
+          <p class="text-gray-500 text-sm">You approve, we publish across all platforms</p>
+        </div>
+      </div>
+      
+      <!-- What you get -->
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-gray-50 rounded-3xl p-10">
+          <h3 class="text-2xl font-bold text-navy mb-8">What You Get</h3>
+          <div class="space-y-5">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-emerald-50 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="user" class="w-5 h-5 text-emerald-500"></i>
+              </div>
+              <div>
+                <p class="text-navy font-medium">Your Digital Twin</p>
+                <p class="text-gray-500 text-sm">AI avatar trained on your voice, face, and style</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-emerald-50 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="video" class="w-5 h-5 text-emerald-500"></i>
+              </div>
+              <div>
+                <p class="text-navy font-medium">15+ Minutes Monthly</p>
+                <p class="text-gray-500 text-sm">Professional video content delivered consistently</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-emerald-50 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="layout-dashboard" class="w-5 h-5 text-emerald-500"></i>
+              </div>
+              <div>
+                <p class="text-navy font-medium">Notion Dashboard</p>
+                <p class="text-gray-500 text-sm">One-click approval. Full visibility.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-emerald-50 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="share-2" class="w-5 h-5 text-emerald-500"></i>
+              </div>
+              <div>
+                <p class="text-navy font-medium">Multi-Platform</p>
+                <p class="text-gray-500 text-sm">LinkedIn, YouTube, TikTok, Instagram</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-gray-50 rounded-3xl p-10">
+          <h3 class="text-2xl font-bold text-navy mb-8">The Tech Stack</h3>
+          <p class="text-gray-500 mb-6">Same AI pipeline major media companies use — packaged for personal brands.</p>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="bg-white rounded-xl p-4 text-center border border-gray-100">
+              <p class="text-gold font-semibold">Claude Opus</p>
+              <p class="text-gray-400 text-xs mt-1">Script Intelligence</p>
+            </div>
+            <div class="bg-white rounded-xl p-4 text-center border border-gray-100">
+              <p class="text-gold font-semibold">Veo 3.1</p>
+              <p class="text-gray-400 text-xs mt-1">Video Generation</p>
+            </div>
+            <div class="bg-white rounded-xl p-4 text-center border border-gray-100">
+              <p class="text-gold font-semibold">Eleven Labs</p>
+              <p class="text-gray-400 text-xs mt-1">Voice Cloning</p>
+            </div>
+            <div class="bg-white rounded-xl p-4 text-center border border-gray-100">
+              <p class="text-gold font-semibold">n8n + Notion</p>
+              <p class="text-gray-400 text-xs mt-1">Automation</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== WHO IT'S FOR ==================== -->
+  <section id="who" class="py-24 lg:py-32 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <p class="text-gold font-medium text-sm tracking-wider uppercase mb-4">Perfect Fit</p>
+        <h2 class="text-3xl lg:text-4xl font-bold text-navy mb-6">Is This For You?</h2>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div class="bg-emerald-50 rounded-3xl p-8 border border-emerald-100">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 rounded-xl bg-emerald-100 flex items-center justify-center">
+              <i data-lucide="check" class="w-5 h-5 text-emerald-600"></i>
+            </div>
+            <h3 class="text-lg font-bold text-navy">This Is For You If...</h3>
+          </div>
+          <ul class="space-y-3 text-sm">
+            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5"></i><span class="text-gray-600">Founder/consultant with €500k-€5M business</span></li>
+            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5"></i><span class="text-gray-600">Expertise worth sharing but hate filming</span></li>
+            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5"></i><span class="text-gray-600">Value your time at €200+/hour</span></li>
+            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5"></i><span class="text-gray-600">Want visibility without becoming a creator</span></li>
+          </ul>
+        </div>
+        
+        <div class="bg-red-50 rounded-3xl p-8 border border-red-100">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 rounded-xl bg-red-100 flex items-center justify-center">
+              <i data-lucide="x" class="w-5 h-5 text-red-600"></i>
+            </div>
+            <h3 class="text-lg font-bold text-navy">This Is NOT For You If...</h3>
+          </div>
+          <ul class="space-y-3 text-sm">
+            <li class="flex items-start gap-3"><i data-lucide="x-circle" class="w-4 h-4 text-red-500 flex-shrink-0 mt-0.5"></i><span class="text-gray-600">You love being on camera</span></li>
+            <li class="flex items-start gap-3"><i data-lucide="x-circle" class="w-4 h-4 text-red-500 flex-shrink-0 mt-0.5"></i><span class="text-gray-600">No established expertise yet</span></li>
+            <li class="flex items-start gap-3"><i data-lucide="x-circle" class="w-4 h-4 text-red-500 flex-shrink-0 mt-0.5"></i><span class="text-gray-600">Looking for "cheap and fast"</span></li>
+            <li class="flex items-start gap-3"><i data-lucide="x-circle" class="w-4 h-4 text-red-500 flex-shrink-0 mt-0.5"></i><span class="text-gray-600">Not ready to invest in personal brand</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PRICING SECTION ==================== -->
+  <section id="pricing" class="py-24 lg:py-32 bg-white">
+    <div class="max-w-6xl mx-auto px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <p class="text-gold font-medium text-sm tracking-wider uppercase mb-4">Investment</p>
+        <h2 class="text-3xl lg:text-4xl font-bold text-navy mb-6">Choose Your Package</h2>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div class="bg-gray-50 rounded-3xl p-10 border border-gray-100">
+          <p class="text-gray-400 text-sm uppercase tracking-wider mb-2">Base Package</p>
+          <div class="flex items-baseline gap-2 mb-8">
+            <span class="text-4xl font-bold text-navy">$6,000</span>
+            <span class="text-gray-400">/ 5 weeks</span>
+          </div>
+          <ul class="space-y-3 mb-10 text-sm">
+            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-gold"></i><span class="text-gray-600">AI avatar creation</span></li>
+            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-gold"></i><span class="text-gray-600">8 video scripts/month</span></li>
+            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-gold"></i><span class="text-gray-600">15+ min video content</span></li>
+            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-gold"></i><span class="text-gray-600">2 platform distribution</span></li>
+            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-gold"></i><span class="text-gray-600">Email support</span></li>
+          </ul>
+          <a href="#cta" class="block w-full text-center py-3 rounded-xl border-2 border-gray-200 text-navy font-medium hover:bg-gray-100 transition-colors">Get Started</a>
+        </div>
+        
+        <div class="bg-white rounded-3xl p-10 border-2 border-gold shadow-xl relative">
+          <div class="absolute top-4 right-4 bg-gold text-navy-dark text-xs font-bold px-3 py-1 rounded-full">POPULAR</div>
+          <p class="text-gold text-sm uppercase tracking-wider mb-2">Pro Package</p>
+          <div class="flex items-baseline gap-2 mb-8">
+            <span class="text-4xl font-bold text-navy">$10,000</span>
+            <span class="text-gray-400">/ 7 weeks</span>
+          </div>
+          <ul class="space-y-3 mb-10 text-sm">
+            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-gold"></i><span class="text-gray-600">Everything in Base, plus:</span></li>
+            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-gold"></i><span class="text-gray-600">12 video scripts/month</span></li>
+            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-gold"></i><span class="text-gray-600">25+ min video content</span></li>
+            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-gold"></i><span class="text-gray-600">All platform distribution</span></li>
+            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-gold"></i><span class="text-gray-600">Direct Slack access</span></li>
+            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-gold"></i><span class="text-gray-600">Weekly strategy calls</span></li>
+          </ul>
+          <a href="#cta" class="btn-primary block w-full text-center py-3 rounded-xl bg-gold text-navy-dark font-semibold">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FAQ SECTION ==================== -->
+  <section id="faq" class="py-24 lg:py-32 bg-gray-50">
+    <div class="max-w-3xl mx-auto px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <p class="text-gold font-medium text-sm tracking-wider uppercase mb-4">FAQ</p>
+        <h2 class="text-3xl lg:text-4xl font-bold text-navy mb-6">Common Questions</h2>
+      </div>
+      
+      <div class="space-y-3">
+        <div class="faq-item bg-white rounded-xl border border-gray-100 overflow-hidden">
+          <button class="faq-trigger w-full px-6 py-5 text-left flex items-center justify-between" onclick="this.parentElement.classList.toggle('open')">
+            <span class="font-medium text-navy">Is this legal/ethical?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-gold faq-icon"></i>
+          </button>
+          <div class="faq-answer px-6 pb-5"><p class="text-gray-500 text-sm">Yes. It's YOUR avatar representing YOU. You approve everything before it goes live.</p></div>
+        </div>
+        <div class="faq-item bg-white rounded-xl border border-gray-100 overflow-hidden">
+          <button class="faq-trigger w-full px-6 py-5 text-left flex items-center justify-between" onclick="this.parentElement.classList.toggle('open')">
+            <span class="font-medium text-navy">Will people know it's AI?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-gold faq-icon"></i>
+          </button>
+          <div class="faq-answer px-6 pb-5"><p class="text-gray-500 text-sm">The technology is now indistinguishable. Whether to disclose is your choice.</p></div>
+        </div>
+        <div class="faq-item bg-white rounded-xl border border-gray-100 overflow-hidden">
+          <button class="faq-trigger w-full px-6 py-5 text-left flex items-center justify-between" onclick="this.parentElement.classList.toggle('open')">
+            <span class="font-medium text-navy">How much time do I need?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-gold faq-icon"></i>
+          </button>
+          <div class="faq-answer px-6 pb-5"><p class="text-gray-500 text-sm">2 hours for onboarding, then 15-30 minutes per week to review and approve.</p></div>
+        </div>
+        <div class="faq-item bg-white rounded-xl border border-gray-100 overflow-hidden">
+          <button class="faq-trigger w-full px-6 py-5 text-left flex items-center justify-between" onclick="this.parentElement.classList.toggle('open')">
+            <span class="font-medium text-navy">What happens after?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-gold faq-icon"></i>
+          </button>
+          <div class="faq-answer px-6 pb-5"><p class="text-gray-500 text-sm">Most clients continue with a monthly retainer ($2,500+). Your avatar is trained — we just keep creating.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA SECTION ==================== -->
+  <section id="cta" class="py-24 lg:py-32 bg-navy">
+    <div class="max-w-3xl mx-auto px-6 lg:px-8 text-center">
+      <div class="inline-flex items-center gap-2 bg-gold/10 border border-gold/20 px-4 py-2 rounded-full mb-8">
+        <span class="relative flex h-2 w-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-gold"></span>
+        </span>
+        <span class="text-gold text-sm">Limited to 5 calls per week</span>
+      </div>
+      
+      <h2 class="text-3xl lg:text-4xl font-bold text-white mb-6">
+        Ready to Build Authority<br><span class="text-gold">Without the Camera?</span>
+      </h2>
+      
+      <p class="text-white/60 text-lg max-w-xl mx-auto mb-10">
+        Free 15-minute diagnostic. No pitch. Just clarity on whether this makes sense for your brand.
+      </p>
+      
+      <a href="https://calendly.com/codeandsoul" class="btn-primary inline-flex items-center gap-3 bg-gold text-navy-dark font-semibold px-10 py-4 rounded-xl text-lg shadow-xl">
+        <span>Book Your Free Diagnostic</span>
+        <i data-lucide="arrow-right" class="w-5 h-5"></i>
+      </a>
+      
+      <p class="text-white/40 text-sm mt-6">2 spots remaining this month</p>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-navy-dark py-10">
+    <div class="max-w-6xl mx-auto px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 bg-gold rounded-lg flex items-center justify-center">
+            <i data-lucide="sparkles" class="w-4 h-4 text-navy-dark"></i>
+          </div>
+          <span class="text-white font-semibold">CODE&SOUL</span>
+        </div>
+        <div class="flex items-center gap-6 text-white/40 text-sm">
+          <a href="mailto:hello@codeandsoul.ai" class="hover:text-white transition-colors">hello@codeandsoul.ai</a>
+          <a href="https://linkedin.com/company/code-and-soul" class="hover:text-white transition-colors">LinkedIn</a>
+        </div>
+        <p class="text-white/30 text-sm">© 2026 CODE&SOUL</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>
