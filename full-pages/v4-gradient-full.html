@@ -180,17 +180,21 @@
         
         <!-- Right: Demo Video -->
         <div class="relative lg:pl-8">
-          <div class="relative glass-card rounded-3xl p-4 glow-gold card-shine">
-            <!-- YouTube Video Embed -->
-            <div class="aspect-video rounded-2xl overflow-hidden">
-              <iframe 
-                src="https://www.youtube.com/embed/6AO2SZ1yTXc?rel=0&modestbranding=1" 
-                title="Your Team Doesn't Need to Film Anymore"
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen
-                class="w-full h-full"
-              ></iframe>
+          <a href="https://www.youtube.com/watch?v=6AO2SZ1yTXc" target="_blank" rel="noopener" class="block relative glass-card rounded-3xl p-4 glow-gold card-shine group cursor-pointer hover:scale-[1.02] transition-transform">
+            <!-- YouTube Video Thumbnail -->
+            <div class="aspect-video rounded-2xl overflow-hidden relative">
+              <img 
+                src="https://img.youtube.com/vi/6AO2SZ1yTXc/maxresdefault.jpg" 
+                alt="Your Team Doesn't Need to Film Anymore"
+                class="w-full h-full object-cover"
+              >
+              <div class="absolute inset-0 bg-navy-dark/30 group-hover:bg-navy-dark/10 transition-colors"></div>
+              <!-- Play Button -->
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-20 h-20 rounded-full bg-gold/90 flex items-center justify-center shadow-2xl shadow-gold/30 group-hover:scale-110 transition-transform">
+                  <i data-lucide="play" class="w-8 h-8 text-navy-dark ml-1"></i>
+                </div>
+              </div>
             </div>
             <!-- Caption -->
             <div class="mt-4 flex items-center justify-between px-2">
@@ -200,7 +204,7 @@
                 </div>
                 <div>
                   <p class="text-white font-medium text-sm">See the AI in action</p>
-                  <p class="text-white/40 text-xs">Real avatar demo</p>
+                  <p class="text-white/40 text-xs">Click to watch on YouTube</p>
                 </div>
               </div>
               <div class="flex items-center gap-2 px-3 py-1.5 bg-emerald-500/10 rounded-full border border-emerald-500/20">
@@ -208,7 +212,7 @@
                 <span class="text-emerald-400 text-xs font-medium">Live Demo</span>
               </div>
             </div>
-          </div>
+          </a>
           
           <!-- Floating elements -->
           <div class="absolute -bottom-4 -left-4 lg:-left-8 glass-card rounded-2xl p-4 flex items-center gap-4 float shadow-2xl">
@@ -480,7 +484,7 @@
               <p class="text-white/40 text-xs mt-1">Video Generation</p>
             </div>
             <div class="bg-white/5 rounded-xl p-4 text-center">
-              <p class="text-gold font-semibold">Eleven Labs</p>
+              <p class="text-gold font-semibold">Resemble AI</p>
               <p class="text-white/40 text-xs mt-1">Voice Cloning</p>
             </div>
             <div class="bg-white/5 rounded-xl p-4 text-center">
